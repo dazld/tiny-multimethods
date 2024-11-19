@@ -1,4 +1,4 @@
-# tiny-multimethod
+# tiny-multimethods
 
 A lightweight implementation of Clojure-style multimethods for JavaScript in under 30 lines of code. Define functions that dispatch to different implementations based on runtime values.
 
