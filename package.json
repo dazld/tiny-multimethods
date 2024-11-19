@@ -1,14 +1,31 @@
 {
   "name": "tiny-multimethods",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "type": "module",
+  "repository": "https://github.com/dazld/tiny-multimethods",
   "main": "index.js",
   "scripts": {
     "test": "npx mocha",
     "test:watch": "npx mocha --watch"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "multimethod",
+    "multimethods",
+    "multi",
+    "method",
+    "multiple dispatch",
+    "dynamic dispatch",
+    "polymorphic",
+    "clojure",
+    "function",
+    "functions",
+    "types",
+    "ts",
+    "typescript"
+  ],
+  "author": "Dan Peddle",
+  "license": "MIT",
+  "description": "Tiny port of Clojure's multimethods with zero dependencies and 30 LOC.",
   "devDependencies": {
     "mocha": "^10.8.2"
   }

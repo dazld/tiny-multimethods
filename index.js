@@ -3,8 +3,9 @@
 // TODO: show difference to a class
 // TODO: show the benefits over a standard object
 
-
 const DEFAULT = Symbol('DEFAULT_DEFMULTI');
+
+
 
 function defmulti(dispatchFn, ...methods) {
   const dispatchTable = new Map();

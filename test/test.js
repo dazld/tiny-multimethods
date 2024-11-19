@@ -1,5 +1,8 @@
+//const {defmulti, DEFAULT} = require('../index.js')
+//const assert = require('assert');
+
+import { defmulti, DEFAULT} from '../index.js'
 import assert from 'assert'
-import {defmulti, DEFAULT} from './index.js'
 
 describe('fundamental api', function () {
   const sound = defmulti((a) => a.kind,
@@ -34,7 +37,6 @@ describe('no default behaviour', ()=>{
 
     assert(errors[0] instanceof Error)
     assert(errors[0].toString().includes('no DEFAULT'))
-
   })
 
 })

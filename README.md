@@ -5,7 +5,7 @@ A lightweight implementation of Clojure-style multimethods for JavaScript in und
 ## Installation
 
 ```bash
-npm install tiny-multimethod
+npm install tiny-multimethods
 ```
 
 ## Usage
