@@ -11,7 +11,7 @@ npm install tiny-multimethods
 ## Usage
 
 ```javascript
-import { defmulti, DEFAULT } from 'tiny-multimethod';
+import { defmulti, DEFAULT } from 'tiny-multimethods';
 
 // Create a multimethod that dispatches based on shape type
 const calculateArea = defmulti(
