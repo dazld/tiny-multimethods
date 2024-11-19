@@ -1,0 +1,15 @@
+{
+  "name": "tiny-multimethods",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha",
+    "test:watch": "npx mocha --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "mocha": "^10.8.2"
+  }
+}
