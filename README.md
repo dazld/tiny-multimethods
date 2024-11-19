@@ -39,7 +39,6 @@ calculateArea.addMethod('triangle', shape =>
 - 🎯 Flexible dispatch: Use any function to determine which method to call
 - 🔌 Extensible: Add new methods at runtime
 - 🛟 Default cases: Handle unknown values gracefully
-- 🧩 Multiple dispatch patterns: Support for both array pairs and separate arguments
 
 ## API
 
