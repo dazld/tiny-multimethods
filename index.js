@@ -1,17 +1,15 @@
 // name of polymorphic multi method
-// we can exstend a multi method at runtime for a given shape of data
+// we can extend a multi method at runtime for a given shape of data
 // TODO: show difference to a class
 // TODO: show the benefits over a standard object
 
 const DEFAULT = Symbol('DEFAULT_DEFMULTI');
 
-
-
 function defmulti(dispatchFn, ...methods) {
   const dispatchTable = new Map();
 
   const addMethod = (maybeConfig, maybeMethod) => {
-    let o,f;
+    let o, f;
 
     if (typeof maybeMethod === 'undefined') {
       [o, f] = maybeConfig
@@ -24,6 +22,10 @@ function defmulti(dispatchFn, ...methods) {
   }
 
   methods.forEach((m) => addMethod(m))
+
+  const matchingMethods = () => {
+    return [...dispatchTable.keys()];
+  }
 
   const facade = (o) => {
     const method = dispatchTable.get(dispatchFn(o))
@@ -39,6 +41,7 @@ function defmulti(dispatchFn, ...methods) {
     throw new Error(`No matching method found for ${JSON.stringify(o)}, and no DEFAULT value specified`);
   };
 
+  facade.methods = matchingMethods;
   facade.addMethod = addMethod;
 
   return facade;

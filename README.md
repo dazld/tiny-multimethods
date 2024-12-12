@@ -127,12 +127,21 @@ const processor = defmulti(
   ['v1', data => ({ ...data, upgraded: true })]
 );
 
+// inspect available methods
+processor.methods()
+// => ['v1']
+
 // Add support for new version later
 processor.addMethod('v2', data => ({
   ...data,
   upgraded: true,
   timestamp: Date.now()
 }));
+
+// observe new method is available
+processor.methods()
+// => ['v1', 'v2']
+
 ```
 
 ## Why Use This?

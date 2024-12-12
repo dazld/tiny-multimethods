@@ -22,6 +22,11 @@ describe('fundamental api', function () {
     sound.addMethod('CAT', () => 'MEOW')
     assert.equal('MEOW', sound({kind:'CAT'}))
   })
+
+  it('should report defined methods', () => {
+    const methods = sound.methods();
+    assert.deepEqual(methods, [DEFAULT, 'DOG', 'CAT'])
+  })
 })
 
 describe('no default behaviour', ()=>{

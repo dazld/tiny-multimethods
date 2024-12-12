@@ -28,7 +28,8 @@ export type MethodImplementation<T, R> = (value: T) => R;
 export type MethodDefinition<T, K, R> = [K, MethodImplementation<T, R>];
 
 /**
- * A multimethod function that includes an addMethod function for runtime extension
+ * A multimethod function that includes an addMethod function for runtime extension, and a function for discovering
+ * available methods.
  * @typeparam T - The input type for the multimethod
  * @typeparam R - The return type of the methods
  */
@@ -36,6 +37,7 @@ export interface Multimethod<T, R> {
     (value: T): R;
     addMethod(dispatchValue: any, implementation: MethodImplementation<T, R>): void;
     addMethod(definition: MethodDefinition<T, any, R>): void;
+    methods(): any[];
 }
 
 /**
